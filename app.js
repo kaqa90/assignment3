@@ -78,7 +78,7 @@
                 foundItems: "<",
                 onRemove: "&"
             },
-            controller: FoundItemsDirectiveController,
+
             bindToController: true,
             controllerAs: "ctrl"
         };
@@ -86,6 +86,6 @@
         return ddo;
     }
 
-    function FoundItemsDirectiveController () {}
+  
 
 })();
