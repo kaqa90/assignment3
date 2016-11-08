@@ -6,7 +6,7 @@
            .service("MenuSearchService", MenuSearchService)
            .directive("foundItems", FoundItems);
 
-    NarrowItDownController.$inject = ["MenuSearchService"];  
+    NarrowItDownController.$inject = ["MenuSearchService"];
     function NarrowItDownController(MenuSearchService) {
         var ctrl = this;
 
