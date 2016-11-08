@@ -26,7 +26,7 @@
                 ctrl.found = response;
             })
             .catch(function (error) {
-                console.log("Something went wrong:", error);
+                console.log(error);
             });
         };
 
@@ -85,7 +85,4 @@
 
         return ddo;
     }
-
-  
-
 })();
