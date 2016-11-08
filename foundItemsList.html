@@ -15,7 +15,7 @@
             <td>{{ item.short_name }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.description }}</td>
-            <td>{{if (item.price_small) { item.price_small | currency:$} else {0}}}-{{item.price_large|currency:$}}</td>
+            <td>{{if (item.price_small) { item.price_small | currency:$:0} else {0}}}-{{item.price_large|currency:$:0}}</td>
             <td>
                 <button class="btn btn-primary btn-sm" aria-label="Remove"
                     ng-click="ctrl.onRemove({ index: $index})">
