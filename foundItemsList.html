@@ -4,14 +4,18 @@
         <table class="table table-hover">
         <tr>
             <th>ID</th>
+            <th>Short Name</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Price Range</th>
             <th></th>
         </tr>
         <tr ng-repeat="item in ctrl.foundItems">
+            <td>{{ item.id }}</td>
             <td>{{ item.short_name }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.description }}</td>
+            <td>{{ item.price_small }} - {{item.price_large}}</td>
             <td>
                 <button class="btn btn-primary btn-sm" aria-label="Remove"
                     ng-click="ctrl.onRemove({ index: $index})">
