@@ -26,11 +26,12 @@
                 ctrl.found = response;
             })
             .catch(function (error) {
-                console.log(error);
+                console.log("Something went wrong:", error);
             });
         };
 
         ctrl.removeItem = function (index) {
+            // ctrl.found.splice(index, 1);
             MenuSearchService.removeItem(index);
         };
     }
@@ -48,6 +49,7 @@
                 url: "https://davids-restaurant.herokuapp.com/menu_items.json"
             }).then(function (result) {
 
+                // process result and only keep items that match
                 var allItems = result.data.menu_items;
                 foundItems = [];
 
@@ -56,6 +58,8 @@
                         foundItems.push(allItems[i]);
                     }
                 }
+
+                // return processed items
                 return foundItems;
             });
         };
@@ -74,11 +78,14 @@
                 foundItems: "<",
                 onRemove: "&"
             },
-
+            controller: FoundItemsDirectiveController,
             bindToController: true,
             controllerAs: "ctrl"
         };
 
         return ddo;
     }
+
+    function FoundItemsDirectiveController () {}
+
 })();
